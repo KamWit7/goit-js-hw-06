@@ -1,9 +1,10 @@
-const fontSizeControler = document.querySelector("#font-size-control")
-const text = document.querySelector("#text")
+const qs = (val) => document.querySelector(val)
+const fontSizeControler = qs("#font-size-control")
+const text = qs("#text")
 
 const setFontSize = () => {
-  let currentRangeVal = fontSizeControler.value
-  text.style.fontSize = `${currentRangeVal}px`
+  let rangeValue = fontSizeControler.value
+  text.style.fontSize = `${rangeValue}px`
 }
 
 fontSizeControler.addEventListener("input", setFontSize)

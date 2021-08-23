@@ -1,15 +1,16 @@
 const categoryItems = document.querySelectorAll(".item")
+const arrCategoryItems = [...categoryItems]
 
-const itemsNames = [...categoryItems].map(
+const itemsNames = arrCategoryItems.map(
   (ele) => ele.firstElementChild.innerText
 )
-const categoryQuantity = [...categoryItems].map(
+const categoryQuantity = arrCategoryItems.map(
   (ele) => ele.lastElementChild.children.length
 )
 
-console.log(`Number of categories: ${categoryItems.length}`)
+console.log(`Number of categories: ${arrCategoryItems.length}`)
 
-for (let i = 0; i < itemsNames.length; i++) {
-  console.log(`Category: ${itemsNames[i]}`)
-  console.log(`Elements: ${categoryQuantity[i]}`)
-}
+arrCategoryItems.forEach((ele, idx) => {
+  console.log(`Category: ${itemsNames[idx]}`)
+  console.log(`Elements: ${categoryQuantity[idx]}`)
+})

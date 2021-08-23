@@ -8,7 +8,7 @@ const btn = qs(".change-color")
 const colorSpan = qs(".color")
 
 function changeBgColor() {
-  const currentColor = getRandomHexColor()
+  let currentColor = getRandomHexColor()
   body.style.backgroundColor = currentColor
   colorSpan.innerText = currentColor
 }

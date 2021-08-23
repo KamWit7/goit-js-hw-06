@@ -7,10 +7,9 @@ const ingredients = [
   "Condiments",
 ]
 const ingredientsList = document.querySelector("#ingredients")
-let listItem
 
 ingredients.forEach((ele) => {
-  listItem = document.createElement("li")
+  let listItem = document.createElement("li")
   listItem.innerText = ele
   listItem.classList.add("item")
   ingredientsList.append(listItem)

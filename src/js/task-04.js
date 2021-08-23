@@ -1,15 +1,14 @@
-let counterValue = 0
-const decrementBtn = document.querySelector('[data-action="decrement"]')
-const value = document.querySelector("#value")
-const incrementBtn = document.querySelector('[data-action="increment"]')
+let counter = 0
+const qs = (val) => document.querySelector(val)
+const decrementBtn = qs('[data-action="decrement"]')
+const value = qs("#value")
+const incrementBtn = qs('[data-action="increment"]')
 
-const counterChange = (operation) => {
-  if (operation === "decrement") counterValue--
-  if (operation === "increment") counterValue++
-  value.innerText = counterValue
+const setCounter = (operation) => {
+  if (operation === "decrement") counter--
+  if (operation === "increment") counter++
+  value.innerText = counter
 }
 
-decrementBtn.addEventListener("click", (event) => counterChange("decrement"))
-incrementBtn.addEventListener("click", (event) => counterChange("increment"))
-
-// Dlaczego nie dziła z callbackiem ?
+decrementBtn.addEventListener("click", (event) => setCounter("decrement"))
+incrementBtn.addEventListener("click", (event) => setCounter("increment"))

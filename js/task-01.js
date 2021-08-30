@@ -13,4 +13,4 @@ console.log(`Number of categories: ${arrCategoryItems.length}`)
 arrCategoryItems.forEach((ele, idx) => {
   console.log(`Category: ${itemsNames[idx]}`)
   console.log(`Elements: ${categoryQuantity[idx]}`)
-})
+})  
